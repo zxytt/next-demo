@@ -11,8 +11,7 @@ export default function About({ data }) {
 }
 
 export async function getStaticProps() {
-  // const res = await fetch('http://39.101.67.62:8055/items/news')
-  const res = await fetch(`${process.env.NEXT_PUBLIC_DIRECTUS_API_URL}/news`)
+  const res = await fetch('http://39.101.67.62:8055/items/news')
   const { data } = await res.json()
   return {
     props: {
